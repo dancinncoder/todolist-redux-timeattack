@@ -1,4 +1,4 @@
-import { createStoreHook } from "react-redux";
+import { createStore } from "redux";
 import { combineReducers } from "redux";
 import todos from "./modules/todos";
 //1. rootReducer 만들기
@@ -9,6 +9,6 @@ const rootReducer = combineReducers({
   todos,
 });
 
-const store = createStoreHook(rootReducer);
+const store = createStore(rootReducer);
 
 export default store;
